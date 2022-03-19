@@ -48,3 +48,5 @@ The `sfdx-project.json` file contains useful configuration information for your 
 ## sudo npm install -g n
 ## curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 ## nvm install node
+
+## removed name line from sfdx-project.json (getting error unexpected JSON) 
