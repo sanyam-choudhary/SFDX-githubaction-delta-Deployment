@@ -21,3 +21,30 @@ The `sfdx-project.json` file contains useful configuration information for your 
 
 ## create .github/workflows folders
 ## create feature.yml,master.yml,QA.yml,tag.yml
+
+## created tags and pushed to github
+
+## git tag prod-start 
+## git tag qa-start
+## git tag sit-start
+## git tag uat-start 
+
+## git push -- tags
+
+## to install nvm and node with the latest version
+## create environment variable in github>>settings>>New Environment>>QA>>SF_QA_ORG__AUTH_URL>>SF_NO_DESTRUCTIVE
+
+## install sfdx cli on system so that we can get auth url 
+## SF_QA_ORG__AUTH_URL
+## sfdx auth:device:login -a <ORG ALIAS> -r <ORG URL>
+## sfdx force:org:display --verbose -u <ORG ACTIVE USERNAME WITH SYSTEMADMIN PROFILE>
+
+## https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_install_cli.htm#sfdx_setup_install_cli_linux
+## sfdx --version  (to check cli version)
+## create the username,password and org url handy to run the below commands in terminal 
+## sfdx auth:device:login -a QA -r https://wiprolimited-b6-dev-ed.my.salesforce.com
+## sudo npm install sfdx-cli --global
+## sudo npm install @salesforce/cli --global
+## sudo npm install -g n
+## curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+## nvm install node
