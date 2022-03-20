@@ -11,7 +11,7 @@ on:
     paths:
       - "force-app/**"
 env:
-  SF_QA_ORG__AUTH_URL: ${{ secrets.SF_QA_ORG__AUTH_URL }}
+  SF_ORG__QA__AUTH_URL: ${{ secrets.SF_ORG__QA__AUTH_URL }}
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -21,7 +21,10 @@ jobs:
     runs-on: ubuntu-latest
     #Choose the docker image from which the container should be created
     container:
-      image: sanyamc2304/sfdx-docker-image
+      image: sanyamc2304/sfdxdelta:npmdelta
+      #sanyamc2304/sfdx-di:cliupdate 
+      #sanyamc2304/sfdx-delta-image:gitupdate
+      #abhisheksaxena7/sfdx-git-delta:latest
       options: --user 0:0 --privileged
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -31,8 +34,10 @@ jobs:
 
       - name: Authorize Org
         run: |
-          echo $SF_QA_ORG__AUTH_URL > authURLFile
+          echo $SF_ORG__QA__AUTH_URL > authURLFile
           sfdx force:auth:sfdxurl:store -f authURLFile -s -a QA
+      - name: Install SFDX Delta plugin
+        run: echo y | sfdx plugins:install sfdx-git-delta    
       - name: Differential Deployment
         run: |
           sfdx sgd:source:delta --from $(git describe --match "qa-*" --abbrev=0 --tags HEAD) --to HEAD --output . --ignore .forceignore
