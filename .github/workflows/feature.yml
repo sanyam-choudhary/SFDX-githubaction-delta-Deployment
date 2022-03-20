@@ -44,10 +44,6 @@ jobs:
           sfdx sgd:source:delta --from $(git describe --match "qa-*" --abbrev=0 --tags HEAD) --to HEAD --output . --ignore .forceignore
           echo "--- package.xml generated with added and modified metadata from $(git describe --match "qa-*" --abbrev=0 --tags HEAD)---"
           cat package/package.xml
+          echo "--- destructiveChanges.xml generated with deleted metadata ---"
+          cat destructiveChanges/destructiveChanges.xml
           sfdx force:source:deploy -x package/package.xml --checkonly
-        #run: |
-         # sfdx sgd:source:delta --from $(git describe --match "qa-*" --abbrev=0 --tags HEAD) --to HEAD --output . --ignore .forceignore
-         # echo ""--- destructiveChanges.xml generated with deleted metadata from $(git describe --match "qa-*" --abbrev=0 --tags HEAD)---"
-         # cat destructiveChanges/destructiveChanges.xml
-         # sfdx force:source:deploy -d destructiveChanges/destructiveChanges.xml --checkonly
-        
