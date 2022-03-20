@@ -47,7 +47,7 @@ jobs:
           "--- destructiveChanges.xml generated with deleted metadata ---"
           cat destructiveChanges/destructiveChanges.xml
           sfdx force:source:deploy -x package/package.xml
-          sfdx force:mdapi:deploy -d destructiveChanges
+          sfdx force:mdapi:deploy -d destructiveChanges -w 10
       - name: create tag
         run: |
           git tag qa-$(date +"%Y%m%d%H%M%S")
@@ -59,7 +59,7 @@ jobs:
     runs-on: ubuntu-latest
     #Choose the docker image from which the container should be created
     container:
-      image: sanyamc2304/sfdx-docker-image:latest
+      image: sanyamc2304/sfdx-delta-deployment:latest
       options: --user 0:0 --privileged
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
