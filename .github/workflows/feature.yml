@@ -48,3 +48,4 @@ jobs:
           cat destructiveChanges/destructiveChanges.xml
           sfdx force:source:deploy -x package/package.xml --checkonly
           sfdx force:mdapi:deploy -d destructiveChanges  --checkonly
+          sfdx force:mdapi:deploy:report

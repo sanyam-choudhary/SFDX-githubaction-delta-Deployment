@@ -46,6 +46,7 @@ jobs:
           cat destructiveChanges/destructiveChanges.xml
           sfdx force:source:deploy -x package/package.xml
           sfdx force:mdapi:deploy -d destructiveChanges
+          sfdx force:mdapi:deploy:report
           echo "Deleted Sucesfully"
       - name: create tag
         run: |
