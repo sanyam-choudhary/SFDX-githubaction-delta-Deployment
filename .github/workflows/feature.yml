@@ -37,8 +37,8 @@ jobs:
         run: |
           echo $SF_ORG__QA__AUTH_URL > authURLFile
           sfdx force:auth:sfdxurl:store -f authURLFile -s -a QA
-      #- name: Install SFDX Delta plugin
-      #  run: echo y | sfdx plugins:install sfdx-git-delta    
+      - name: Install SFDX Delta plugin
+        run: echo y | sfdx plugins:install sfdx-git-delta    
       - name: Differential Deployment
         run: |
           sfdx sgd:source:delta --from $(git describe --match "qa-*" --abbrev=0 --tags HEAD) --to HEAD --output . --ignore .forceignore
