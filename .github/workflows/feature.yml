@@ -31,8 +31,8 @@ jobs:
 
       - name: Authorize Org
         run: |
-          echo $ SF_ORG__QA__AUTH_URL > authURLFile
-          sfdx force:auth:sfdxurl:store -f authURLFile -s -a QA
+          echo $ SF_ORG__QA__AUTH_URL > authURLFile.sfdx
+          sfdx force:auth:sfdxurl:store -f authURLFile.sfdx -s -a QA
       - name: Differential Deployment
         run: |
           sfdx sgd:source:delta --from $(git describe --match "qa-*" --abbrev=0 --tags HEAD) --to HEAD --output . --ignore .forceignore
