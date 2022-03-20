@@ -42,9 +42,11 @@ jobs:
       - name: Differential Deployment
         run: |
           sfdx sgd:source:delta --from $(git describe --match "qa-*" --abbrev=0 --tags HEAD) --to HEAD --output . --ignore .forceignore
-          echo "--- package.xml generated with added and modified metadata from $(git describe --match "qa-*" --abbrev=0 --tags HEAD)---"
+          echo 
+          "--- package.xml generated with added and modified metadata from $(git describe --match "qa-*" --abbrev=0 --tags HEAD)---"
           cat package/package.xml
-          echo "--- destructiveChanges.xml generated with deleted metadata ---"
+          echo 
+          "--- destructive Manifest ---"
           cat destructiveChanges/destructiveChanges.xml
           sfdx force:source:deploy -x package/package.xml --checkonly
           sfdx force:mdapi:deploy -d destructiveChanges --checkonly
