@@ -47,7 +47,8 @@ jobs:
           "--- destructiveChanges.xml generated with deleted metadata ---"
           cat destructiveChanges/destructiveChanges.xml
           sfdx force:source:deploy -x package/package.xml
-          sfdx force:mdapi:deploy -d destructiveChanges -w 10
+          sfdx force:mdapi:deploy -d destructiveChanges  10
+          echo "Deleted Sucesfully"
       - name: create tag
         run: |
           git tag qa-$(date +"%Y%m%d%H%M%S")

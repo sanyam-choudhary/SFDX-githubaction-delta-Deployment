@@ -49,4 +49,4 @@ jobs:
           "--- destructive Manifest ---"
           cat destructiveChanges/destructiveChanges.xml
           sfdx force:source:deploy -x package/package.xml --checkonly
-          sfdx force:mdapi:deploy -d destructiveChanges -w 10 --checkonly
+          sfdx force:mdapi:deploy -d destructiveChanges  --checkonly
