@@ -29,7 +29,7 @@ jobs:
 
       - name: Authorize Org
         run: |
-          echo $ {SF_QA_ORG__AUTH_URL} > authURLFile
+          echo $ SF_QA_ORG__AUTH_URL > authURLFile
           sfdx auth:sfdxurl:store -f authURLFile -s -a QA
       - name: Install SGD
         run: echo y | sfdx plugins:install sfdx-git-delta
