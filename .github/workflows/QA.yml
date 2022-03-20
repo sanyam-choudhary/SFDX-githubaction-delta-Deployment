@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     #Choose the docker image from which the container should be created
     container:
-      image: sanyamc2304/sfdxdelta:latest
+      image: sanyamc2304/sfdxdelta::multiple
       #sanyamc2304/sfdx-di:cliupdate 
       #sanyamc2304/sfdx-delta-image:gitupdate 
       #abhisheksaxena7/sfdx-git-delta:latest
