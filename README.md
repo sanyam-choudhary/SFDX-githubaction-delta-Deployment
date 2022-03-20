@@ -50,3 +50,8 @@ The `sfdx-project.json` file contains useful configuration information for your 
 ## nvm install node
 
 ## removed name line from sfdx-project.json (getting error unexpected JSON) 
+## restarted the VS Code
+## The auth error was due to space in the command
+## to mention the workflow in the .forceignore 
+## destrutive and pacakge in .gitignore
+## to instal the delta plugin 
