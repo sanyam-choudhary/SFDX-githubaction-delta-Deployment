@@ -54,4 +54,4 @@ The `sfdx-project.json` file contains useful configuration information for your 
 ## The auth error was due to space in the command
 ## to mention the workflow in the .forceignore 
 ## destrutive and pacakge in .gitignore
-## to instal the delta plugin 
+## to instal the delta plugin tried with docker image but it says sgd not available so that is the reason installed in the yml file.
