@@ -21,7 +21,8 @@ jobs:
     runs-on: ubuntu-latest
     #Choose the docker image from which the container should be created
     container:
-      image: sanyamc2304/sfdx-delta-image:gitupdate
+      image: abhisheksaxena7/sfdx-git-delta:latest 
+      #sanyamc2304/sfdx-delta-image:gitupdate
       options: --user 0:0 --privileged
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
