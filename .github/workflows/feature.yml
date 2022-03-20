@@ -31,7 +31,7 @@ jobs:
 
       - name: Authorize Org
         run: |
-          echo $ SF_ORG__QA__AUTH_URL > authURLFile
+          echo $SF_ORG__QA__AUTH_URL > authURLFile
           sfdx force:auth:sfdxurl:store -f authURLFile -s -a QA
       - name: Differential Deployment
         run: |
