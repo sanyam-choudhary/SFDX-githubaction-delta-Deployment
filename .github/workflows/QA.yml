@@ -44,8 +44,8 @@ jobs:
           cat package/package.xml
           echo "--- destructiveChanges.xml generated with deleted metadata ---"
           cat destructiveChanges/destructiveChanges.xml
-          sfdx force:source:deploy -x package/package.xml
-          sfdx force:mdapi:deploy -d destructiveChanges
+          sfdx force:source:deploy -x package/package.xml --wait 1
+          sfdx force:mdapi:deploy -d destructiveChanges --wait 1
           sfdx force:mdapi:deploy:report
           echo "Deleted Sucesfully"
       - name: create tag
