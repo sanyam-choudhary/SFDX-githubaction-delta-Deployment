@@ -10,3 +10,7 @@ package.xml
 **/workflows/*.yml
 # LWC Jest
 **/__tests__/**
+
+#ignore the below components
+
+force-app/main/default/flows/Test_delete_flow_04.flow-meta.xml 
