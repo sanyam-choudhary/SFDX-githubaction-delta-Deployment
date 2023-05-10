@@ -2,8 +2,8 @@
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>57.0</apiVersion>
     <environments>Default</environments>
-    <interviewLabel>Test delete flow 04 {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>Test delete flow 04</label>
+    <interviewLabel>Test flow delete 03 {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Test flow delete 03</label>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>
@@ -24,8 +24,8 @@
     </processMetadataValues>
     <processType>Flow</processType>
     <screens>
-        <name>testvdf</name>
-        <label>testvdf</label>
+        <name>tesabc</name>
+        <label>tesabc</label>
         <locationX>176</locationX>
         <locationY>158</locationY>
         <allowBack>true</allowBack>
@@ -38,8 +38,8 @@
         <locationX>50</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>testvdf</targetReference>
+            <targetReference>tesabc</targetReference>
         </connector>
     </start>
-    <status>Active</status>
+    <status>Draft</status>
 </Flow>
