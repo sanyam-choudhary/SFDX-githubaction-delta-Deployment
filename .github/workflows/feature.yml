@@ -46,6 +46,6 @@ jobs:
           cat package/package.xml
           echo "--- destructive Manifest ---"
           cat destructiveChanges/destructiveChanges.xml
-          sfdx force:source:deploy -x package/package.xml --checkonly
-          sfdx force:mdapi:deploy -d destructiveChanges  --checkonly
+          sfdx force:source:deploy -x package/package.xml --checkonly --wait 1
+          sfdx force:mdapi:deploy -d destructiveChanges  --checkonly --wait 1
           sfdx force:mdapi:deploy:report
