@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Test_Branch_11_c</fullName>
+    <fullName>Test_Branch_11__c</fullName>
     <externalId>false</externalId>
     <label>Test Branch 10</label>
     <length>20</length>
